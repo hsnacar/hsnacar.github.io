@@ -6,17 +6,136 @@
       href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+      }
       .henny-penny-regular {
         font-family: "Henny Penny", system-ui;
         font-weight: 400;
         font-style: normal;
-        font-size: 30px;
+        font-size: 20px;
+      }
+      .saira-stencil-one-regular {
+        font-family: "Saira Stencil One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+      }
+      .cascadia-code {
+        font-family: "Cascadia Code", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 20px;
+      }
+      .game-card {
+        height: 500px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10;
+        border-radius: 10px;
+      }
+      .water-sort-puzzle {
+        background: url(water-sort-puzzle.png) center center no-repeat;
+        background-size: cover;
+      }
+      .minefield {
+        background: url(minefield.png) center center no-repeat;
+        background-size: cover;
+      }
+      .sudoku {
+        background: url(sudoku-legend.png) center center no-repeat;
+        background-size: cover;
+      }
+      .game-name {
+        background-color: rgba(0, 0, 0, 1);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 10px 0px 0px;
+        padding: 5 0;
+        height: 50px;
+        min-width: 300px;
+      }
+      .white {
+        color: white;
+      }
+      .download {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 0px 10px 10px;
+        padding: 5 0;
+        height: 50px;
+      }
+      .download a {
+        text-decoration: none;
+        color: white;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
       }
     </style>
   </head>
   <body>
-    <p class="henny-penny-regular">Water Sort Puzzle</p>
-    <p class="henny-penny-regular">Home Page</p>
+    <div class="wrapper">
+      <div class="game-card water-sort-puzzle">
+        <div class="game-name">
+          <p class="henny-penny-regular white">Water Sort Puzzle</p>
+        </div>
+        <div class="download">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hasanacar.watersortpuzzle"
+            target="_blank"
+            >DOWNLOAD</a
+          >
+        </div>
+      </div>
+
+      <div class="game-card sudoku">
+        <div class="game-name">
+          <p class="cascadia-code white">Sudoku Legend</p>
+        </div>
+        <div class="download">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hasanacar.sudokulegend"
+            target="_blank"
+            >DOWNLOAD</a
+          >
+        </div>
+      </div>
+
+      <div class="game-card minefield">
+        <div class="game-name">
+          <p class="saira-stencil-one-regular white">Minefield Unlimited</p>
+        </div>
+        <div class="download">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hasanacar.minefieldunlimited"
+            target="_blank"
+            >DOWNLOAD</a
+          >
+        </div>
+      </div>
+    </div>
   </body>
 </html>
